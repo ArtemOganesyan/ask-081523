@@ -1,3 +1,2 @@
 #hello
-@shop
-  Scenario: learn GitHub
+# scenario
