@@ -9,7 +9,7 @@ import static org.assertj.core.api.Assertions.*;
 import static support.TestContext.getDriver;
 import org.openqa.selenium.WebElement;
 
-public class SharoikoStepDsfs {
+public class SharoikoStepDefs {
     @Then("AS validate the date with xpath {string}")
     public void iValidateTheLocalTimeWithXpath(String xpath) {
         WebElement we = getDriver().findElement(By.xpath(xpath));

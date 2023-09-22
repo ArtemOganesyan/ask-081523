@@ -12,22 +12,22 @@ Feature: AS ASK081523 QuizUpdatedAt
     Then I type "12345Abc" into element with xpath "//input[@formcontrolname='password']"
   # 4. Click on the "Sign In" button
     Then I click on element using JavaScript with xpath "//span[contains(text(),'Sign In')]"
-    Then I wait for 2 sec
+    Then I wait for 1 sec
   # 5.Click on the "Quizzes" on the left side of the page
     Then I click on element using JavaScript with xpath "//h5[contains(text(),'Quizzes')]"
-    Then I wait for 5 sec
+    Then I wait for 1 sec
   # 6. Select quiz from the list on the right side - quiz name - AnnaSh SQL Quiz1
     Then I click on element using JavaScript with xpath "//*[contains(text(), 'AnnaSh')]"
   # 7. Click "Edit" button
     Then I click on element using JavaScript with xpath "//*[contains(text(), 'AnnaSh')]/../../..//*[contains(text(), 'Edit')]"
-    Then I wait for 3 sec
+    Then I wait for 1 sec
   # 8. Click "Save" button
     Then I click on element using JavaScript with xpath "//span[contains(text(),'Save')]"
-    Then I wait for 3 sec
+    Then I wait for 2 sec
    # 9. Select quiz from the list on the right side -  quiz name - AnnaSh SQL Quiz1
     Then I click on element using JavaScript with xpath "//*[contains(text(), 'AnnaSh')]"
-    Then I wait for 5 sec
+    Then I wait for 2 sec
   # 10."Updated At:" date/time should be same as the local current date/time
   #  Then I validate Update At date
     Then AS validate the date with xpath "//mat-panel-title[contains(text(), 'AnnaSh')]/../../..//*[contains(text(), 'Updated At')]/../td[2]"
-    Then I wait for 2 sec
+    Then I wait for 1 sec
