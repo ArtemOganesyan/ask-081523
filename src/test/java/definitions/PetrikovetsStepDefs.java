@@ -110,7 +110,7 @@ public class PetrikovetsStepDefs {
 
 
     @Then("YP click Add option {int} times")
-    public void iClickAddOptionTimes(int count) throws InterruptedException {
+    public void iClickAddOptionTimes(int count) throws Exception {
 
         for (int i = 1; i <= count; i++) {
 
@@ -118,7 +118,12 @@ public class PetrikovetsStepDefs {
             Thread.sleep(100);
             iTypeTextInOptionWithInput(i + 2, "sbe");
             Thread.sleep(100);
+            int totalOptions = i + 2;
 
+            if(totalOptions > 15) {
+                System.out.println("Only 15 options allowed");
+                throw new Exception(i + 2 + " total options. Only 15 options allowed");
+            }
         }
     }
 
