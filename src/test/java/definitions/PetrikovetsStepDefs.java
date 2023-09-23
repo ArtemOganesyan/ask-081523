@@ -69,7 +69,7 @@ public class PetrikovetsStepDefs {
 
     @Then("YP click radio button")
     public void iClickRadioButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//mat-radio-button[@class='mat-radio-button mat-accent']")).click();
+        getDriver().findElement(By.xpath("//*[contains(text(),'Q1')]/../../..//*//mat-radio-button[@class='mat-radio-button mat-accent']")).click();
         Thread.sleep(3000);
     }
 
@@ -123,5 +123,9 @@ public class PetrikovetsStepDefs {
     }
 
 
-
+    @Then("^YP click radio button with xpath \"([^\"]*)\"$")
+    public void ypClickRadioButtonWithXpath(String xpath) throws InterruptedException {
+        getDriver().findElement(By.xpath(xpath)).click();
+        Thread.sleep(2000);
+    }
 }
