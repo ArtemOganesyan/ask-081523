@@ -110,7 +110,7 @@ Feature: Test cases-Single choice question(Options)
     Then I click on element using JavaScript with xpath "//button[@class='mat-raised-button mat-primary']/..//span[contains(text(),'Create New Quiz')]"
     Then I wait for 2 sec
      # Type title of the quiz
-    Then I type "Sp characters" into element with xpath "//input[@placeholder='Title Of The Quiz *']"
+    Then I type "ALPHANUMERIC" into element with xpath "//input[@placeholder='Title Of The Quiz *']"
     # Add question button
     Then I click on element using JavaScript with xpath "//mat-icon[contains(text(),'add_circle')]"
     # Click single-choice question
@@ -129,9 +129,9 @@ Feature: Test cases-Single choice question(Options)
     Then YP click radio button with xpath "//mat-radio-button[@class='mat-radio-button mat-accent']"
     Then I wait for 2 sec
     # Click Save button
-    Then I click on element with xpath "//span[contains(text(),'Save')]"
+    Then I click on element using JavaScript with xpath "//span[contains(text(),'Save')]"
     Then I wait for 2 sec
     #Check the title of the quiz
-    Then I wait for element with xpath "//div[@class='quizzes']/../../../../..//*[contains(text(), 'september')]" to be present
+    Then element with xpath "//div[@class='quizzes']" should contain text "ALPHANUMERIC"
     Then I wait for 2 sec
 
