@@ -1,7 +1,7 @@
 @ask-functional-feature-PMV
 Feature: PMV Functional test for ASK
 
-  Background: open URL
+  Background: open URL and Sign-In
   # Open url 'http://ask-stage.portnov.com'
     Given I open url "http://ask-stage.portnov.com"
   # Fill in Email field
