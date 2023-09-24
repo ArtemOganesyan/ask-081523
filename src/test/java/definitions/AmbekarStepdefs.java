@@ -1,6 +1,7 @@
 package definitions;
 
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
 import org.assertj.core.api.Assertions;
 
@@ -24,5 +25,23 @@ public class AmbekarStepdefs {
     }
 
 
+    @Then("LA created {int} questions")
+    public void laCreatedQuestions(int steps) throws InterruptedException {
+        getDriver().findElement(By.xpath("//*[@formcontrolname='name']")).sendKeys("LA-Max Questions per Quiz");
+        getDriver().findElement(By.xpath("//*[contains(text(),'add_circle')]")).click();
+        Thread.sleep(1000);
+
+        for (int i=1; i<= steps; i++) {
+            getDriver().findElement(By.xpath("//*[contains(text(),'Q"+i+"')]/../../..//*[contains(text(),'Textual')]/..")).click();
+            Thread.sleep(500);
+            getDriver().findElement(By.xpath("//*[contains(text(),'Q"+i+"')]/../../..//*[@formcontrolname='question']")).sendKeys("Question"+i);
+            Thread.sleep(500);
+            if (i != steps) {
+                getDriver().findElement(By.xpath("//*[contains(text(),'add_circle')]")).click();
+            }
+            Thread.sleep(1000);
+
+        }
+    }
 }
 
