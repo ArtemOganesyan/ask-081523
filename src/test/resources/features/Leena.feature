@@ -1,3 +1,1 @@
-#THis a feature file
-  #
-  #a
+#This is a test
