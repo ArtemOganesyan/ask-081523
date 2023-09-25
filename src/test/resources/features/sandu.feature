@@ -1,7 +1,7 @@
 Feature: Functional tests for ASK
 
   Background: Open app
-    Given AS open url "http://ask-stage.portnov.com"
+    Given I open url "http://ask-stage.portnov.com"
 
   @ask-registration-ASM
   Scenario: Successful register new user
@@ -21,6 +21,8 @@ Feature: Functional tests for ASK
 
   @ask-registration-incorrect-ASM
   Scenario Outline: Not allowed special characters
+
+    Given I open url "http://ask-stage.portnov.com"
     Then I click on element with xpath "//span[contains(text(),'Register Now')]/.."
     Then I should see page title as "Assessment Control @ Portnov"
     Then element with xpath "//*[@formcontrolname='firstName']" should be present
@@ -39,8 +41,9 @@ Feature: Functional tests for ASK
       | xpath                                   | title                        | xpath1                            | text | xpath2                               | text1 | xpath3                              | text2               | xpath4                           | text3    | xpath5                           | text4 | xpath6                           | xpath7                                     | xpath8                   | xpath9                                                     |
       | //span[contains(text(),'Register Now')] | Assessment Control @ Portnov | //*[@formcontrolname='firstName'] | Jhon | //*[@formcontrolname='firstName']/.. | Smith | //*[@formcontrolname='lastName']/.. | student11@gmail.com | //*[@formcontrolname='email']/.. | 12345Abc | //*[@formcontrolname='group']/.. | 12345 | //*[@formcontrolname='password'] | //*[@formcontrolname='confirmPassword']/.. | //button[@type='submit'] | //mat-sidenav/ac-side-menu//p[contains(text(), 'STUDENT')] |
 
-  @ask-registration-incorrect-asm
+  @ask-registration-incorrect-ASM
   Scenario Outline: Empty field
+    Given I open url "http://ask-stage.portnov.com"
     Then I click on element with xpath "//span[contains(text(),'Register Now')]/.."
     Then I should see page title as "Assessment Control @ Portnov"
     Then element with xpath "//*[@formcontrolname='firstName']" should be present

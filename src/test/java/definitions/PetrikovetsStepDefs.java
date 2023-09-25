@@ -69,7 +69,7 @@ public class PetrikovetsStepDefs {
 
     @Then("YP click radio button")
     public void iClickRadioButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//mat-radio-button[@class='mat-radio-button mat-accent']")).click();
+        getDriver().findElement(By.xpath("//*[contains(text(),'Q1')]/../../..//*//mat-radio-button[@class='mat-radio-button mat-accent']")).click();
         Thread.sleep(3000);
     }
 
@@ -110,7 +110,7 @@ public class PetrikovetsStepDefs {
 
 
     @Then("YP click Add option {int} times")
-    public void iClickAddOptionTimes(int count) throws InterruptedException {
+    public void iClickAddOptionTimes(int count) throws Exception {
 
         for (int i = 1; i <= count; i++) {
 
@@ -118,10 +118,19 @@ public class PetrikovetsStepDefs {
             Thread.sleep(100);
             iTypeTextInOptionWithInput(i + 2, "sbe");
             Thread.sleep(100);
+            int totalOptions = i + 2;
 
+            if(totalOptions > 15) {
+                System.out.println("Only 15 options allowed");
+                throw new Exception(i + 2 + " total options. Only 15 options allowed");
+            }
         }
     }
 
 
-
+    @Then("^YP click radio button with xpath \"([^\"]*)\"$")
+    public void ypClickRadioButtonWithXpath(String xpath) throws InterruptedException {
+        getDriver().findElement(By.xpath(xpath)).click();
+        Thread.sleep(2000);
+    }
 }
