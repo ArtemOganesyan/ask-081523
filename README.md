@@ -7,8 +7,12 @@ Dmitry Rozanovsky
 Margarita Pletneva  
 Vani Patil  
 Yana Petrikovets  
-Anna Sharoiko  
+Anna Sharoiko
 Saadat Jalilova  
 Leena Ambekar  
+
+
+OAV (artem.oganesyan@gmail.com)  
+
 
 PMV (margaritaplet88@gmail.com)
