@@ -9,9 +9,10 @@ package definitions;
         import static org.assertj.core.api.Assertions.*;
         import static support.TestContext.getDriver;
 
-public class TestPredf {
+public class JalilovaStepDef {
     @Given("SJ open ask-stage url")
-    public void OpenaskUrl() {getDriver().get("http://ask-stage.portnov.com");
+    public void OpenaskUrl() {
+        getDriver().get("http://ask-stage.portnov.com");
     }
 
     @Then("SJ type email")
@@ -34,7 +35,7 @@ public class TestPredf {
     public void SJelementWithXpathShouldBeDisplayed() {
         By byElement = By.xpath("//mat-sidenav/ac-side-menu//p[contains(text(), 'TEACHER')]");
         WebElement element = getDriver().findElement(byElement);
-        Boolean isDisplayed =  element.isDisplayed();
+        Boolean isDisplayed = element.isDisplayed();
         assertThat(isDisplayed).isTrue();
     }
 
@@ -57,3 +58,4 @@ public class TestPredf {
     public void iWaitForSec(int sec) throws Exception {
         Thread.sleep(sec * 1000);
     }
+}

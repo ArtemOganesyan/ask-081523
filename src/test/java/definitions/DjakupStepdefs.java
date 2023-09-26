@@ -1,13 +1,13 @@
+package definitions;
+
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class DjakupStepdefs {
-    @Given("DM open url {string}")
-    public void dmOpenUrl(String arg0) {
+import static support.TestContext.getDriver;
 
-    }
+public class DjakupStepdefs {
 
     @When("DM type {string} into element with xpath {string}")
     public void dmTypeIntoElementWithXpath(String arg0, String arg1) {
