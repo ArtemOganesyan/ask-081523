@@ -4,7 +4,7 @@ Feature: Functional tests for ASK
     Given I open url "http://ask-stage.portnov.com"
 
   @ask-registration-ASK
-  Scenario Outline: Successful register new user
+ Scenario: Successful register new user
     Then I click on element with xpath "//span[contains(text(),'Register Now')]"
     Then I should see page title as "Assessment Control @ Portnov"
     Then element with xpath "//*[@formcontrolname='firstName']" should be present
