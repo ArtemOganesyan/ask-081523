@@ -3,16 +3,3 @@
 Base framework for Java Webdriver automation with Cucumber
 
 Yana Petrikovets  
-
-
-
-
-
-
-
-
-
-
-
-
-
