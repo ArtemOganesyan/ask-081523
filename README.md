@@ -7,12 +7,12 @@ Dmitry Rozanovsky
 Margarita Pletneva  
 Vani Patil  
 Yana Petrikovets  
-Anna Sharoiko
+Anna Sharoiko  
 Saadat Jalilova  
 Leena Ambekar  
 
-
+AKE (anna.k@outlook.com)
 OAV (artem.oganesyan@gmail.com)  
-
-
-PMV (margaritaplet88@gmail.com new)
+DR (rozanovsky@gmail.com)  
+AS (myemail)  
+PMV (margaritaplet88@gmail.com)
