@@ -10,6 +10,7 @@ Yana Petrikovets
 Anna Sharoiko  
 Saadat Jalilova  
 Leena Ambekar  
+Petpailin Ekakkharanon  
 
 AKE (anna.k@outlook.com)
 OAV (artem.oganesyan@gmail.com)  

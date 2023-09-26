@@ -46,3 +46,5 @@ Feature: Functional tests for ASK
     Then I click on element with xpath "//span[contains(text(),'Save')]"
     Then I wait for 3 sec
 
+
+
