@@ -1,4 +1,4 @@
-@ask-functional-feature-yp
+git @ask-functional-feature-yp
 Feature: Test cases-Single choice question(Options)
 
   @SingleChoiceQuestion(Options)-yp
