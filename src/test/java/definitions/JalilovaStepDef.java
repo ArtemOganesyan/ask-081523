@@ -9,7 +9,7 @@ package definitions;
         import static org.assertj.core.api.Assertions.*;
         import static support.TestContext.getDriver;
 
-public class TestPredf {
+public class JalilovaStepDef {
     @Given("SJ open ask-stage url")
     public void OpenaskUrl() {getDriver().get("http://ask-stage.portnov.com");
     }
