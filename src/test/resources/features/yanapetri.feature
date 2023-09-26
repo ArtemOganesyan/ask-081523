@@ -182,3 +182,130 @@ Feature: Test cases-Single choice question(Options)
     Then I wait for 2 sec
 
 
+  @SingleChoiceQuestion(Options)-yp
+  Scenario:Verification of "Move option down" button functionality
+
+    # Open URL
+    Given I open url "http://ask-stage.portnov.com"
+    # Type email
+    Then I type "amr916@byui.me" into element with xpath "//*[@formcontrolname='email']"
+    # Type password
+    Then I type "tester321" into element with xpath "//*[@formcontrolname='password']"
+    # Click Submit button to ligin
+    Then I click on element with xpath "//button[@type='submit']"
+    Then I wait for 2 sec
+    # Click Quizzes on the left side
+    Then I click on element using JavaScript with xpath "//h5[contains(text(),'Quizzes')]"
+    Then I wait for 2 sec
+    # Click Create New Quiz button
+    Then I click on element using JavaScript with xpath "//button[@class='mat-raised-button mat-primary' and .//span[text()='Create New Quiz']]"
+    Then I wait for 2 sec
+    # Type title of the quiz
+    Then I type "Move down" into element with xpath "//input[@placeholder='Title Of The Quiz *']"
+    Then I wait for 2 sec
+    # Click add question
+    Then I click on element using JavaScript with xpath "//mat-icon[contains(text(),'add_circle')]"
+    # Click single - choice
+    Then I click on element using JavaScript with xpath "//*[contains(text(),'Q1')]/../../..//*[contains(text(),'Single-Choice')]"
+    Then I wait for 2 sec
+    # Type text in the Option1 text field
+    Then I type "answer1" into element with xpath "(//*[contains(text(),'Q1')]/../../..//*[@formcontrolname='option'])[1]"
+    # Type text in the Option2 text field
+    Then I type "answer2" into element with xpath "(//*[contains(text(),'Q1')]/../../..//*[@formcontrolname='option'])[2]"
+    Then I wait for 2 sec
+    # Click radio button
+    Then I click on element with xpath "//mat-radio-group[2]/mat-radio-button"
+    Then I wait for 2 sec
+    # Click Settings gear
+    Then I click on element with xpath "//mat-radio-group[1]//*[contains(text(),'settings')]"
+    Then I wait for 2 sec
+    # Click Move down
+    Then I click on element with xpath "//span[contains(text(),'Move option down')]"
+    Then I wait for 2 sec
+
+  @SingleChoiceQuestion(Options)-yp
+  Scenario:Verification of "Move option up" button functionality
+
+    # Open URL
+    Given I open url "http://ask-stage.portnov.com"
+    # Type email
+    Then I type "amr916@byui.me" into element with xpath "//*[@formcontrolname='email']"
+    # Type password
+    Then I type "tester321" into element with xpath "//*[@formcontrolname='password']"
+    # Click Submit button to ligin
+    Then I click on element with xpath "//button[@type='submit']"
+    Then I wait for 2 sec
+    # Click Quizzes on the left side
+    Then I click on element using JavaScript with xpath "//h5[contains(text(),'Quizzes')]"
+    Then I wait for 2 sec
+    # Click Create New Quiz button
+    Then I click on element using JavaScript with xpath "//button[@class='mat-raised-button mat-primary' and .//span[text()='Create New Quiz']]"
+    Then I wait for 2 sec
+    # Type title of the quiz
+    Then I type "Move option up" into element with xpath "//input[@placeholder='Title Of The Quiz *']"
+    Then I wait for 2 sec
+    # Click add question
+    Then I click on element using JavaScript with xpath "//mat-icon[contains(text(),'add_circle')]"
+    # Click single - choice
+    Then I click on element using JavaScript with xpath "//*[contains(text(),'Q1')]/../../..//*[contains(text(),'Single-Choice')]"
+    Then I wait for 2 sec
+    # Type text in the Option1 text field
+    Then I type "answer1" into element with xpath "(//*[contains(text(),'Q1')]/../../..//*[@formcontrolname='option'])[1]"
+    # Type text in the Option2 text field
+    Then I type "answer2" into element with xpath "(//*[contains(text(),'Q1')]/../../..//*[@formcontrolname='option'])[2]"
+    Then I wait for 2 sec
+    # Click radio button
+    Then I click on element with xpath "//mat-radio-group[2]/mat-radio-button"
+    Then I wait for 2 sec
+    # Click Settings gear
+    Then I click on element with xpath "//mat-radio-group[2]//*[contains(text(),'settings')]"
+    Then I wait for 2 sec
+    # Click Move down
+    Then I click on element with xpath "//span[contains(text(),'Move option up')]"
+    Then I wait for 2 sec
+
+  @SingleChoiceQuestion(Options)-yp
+  Scenario:Verification of "Delete option" button functionality
+
+    # Open URL
+    Given I open url "http://ask-stage.portnov.com"
+    # Type email
+    Then I type "amr916@byui.me" into element with xpath "//*[@formcontrolname='email']"
+    # Type password
+    Then I type "tester321" into element with xpath "//*[@formcontrolname='password']"
+    # Click Submit to login
+    Then I click on element with xpath "//button[@type='submit']"
+    Then I wait for 2 sec
+    # Click Quizzes on the left side
+    Then I click on element using JavaScript with xpath "//h5[contains(text(),'Quizzes')]"
+    Then I wait for 2 sec
+    # Click Create New Quiz button
+    Then I click on element using JavaScript with xpath "//button[@class='mat-raised-button mat-primary' and .//span[text()='Create New Quiz']]"
+    Then I wait for 2 sec
+    # Type title of the quiz
+    Then I type "Delete option" into element with xpath "//input[@placeholder='Title Of The Quiz *']"
+    Then I wait for 2 sec
+    # Click add question
+    Then I click on element using JavaScript with xpath "//mat-icon[contains(text(),'add_circle')]"
+    # Click single-choice
+    Then I click on element using JavaScript with xpath "//*[contains(text(),'Q1')]/../../..//*[contains(text(),'Single-Choice')]"
+    Then I wait for 2 sec
+    # Type text in the Option1 text field
+    Then I type "answer1" into element with xpath "(//*[contains(text(),'Q1')]/../../..//*[@formcontrolname='option'])[1]"
+    # Type text in the Option2 text field
+    Then I type "answer2" into element with xpath "(//*[contains(text(),'Q1')]/../../..//*[@formcontrolname='option'])[2]"
+    Then I wait for 2 sec
+    # Click radio button
+    Then I click on element with xpath "//mat-radio-group[2]/mat-radio-button"
+    Then I wait for 2 sec
+    # Click Add option button
+    Then I click on element with xpath "//span[contains(text(),'Add Option')]"
+    # Type text in the Option3 text field
+    Then I type "this option will be deleted" into element with xpath "(//*[contains(text(),'Q1')]/../../..//*[@formcontrolname='option'])[3]"
+    Then I wait for 2 sec
+    # Click Settings gear
+    Then I click on element with xpath "//mat-radio-group[3]//*[contains(text(),'settings')]"
+    Then I wait for 2 sec
+    # Click Delete Option
+    Then I click on element with xpath "//span[contains(text(),'Delete Option')]"
+    Then I wait for 2 sec
