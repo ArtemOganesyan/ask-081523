@@ -95,11 +95,10 @@ public class PredefinedStepDefs {
         getDriver().findElement(By.xpath(xpath)).sendKeys(text);
     }
 
-    @Then("^I click on element with xpath \"([^\"]*)\"$")
-    public void iClickOnElementWithXpath(String xpath) {
+    @Then("I click on element with xpath {string}")
+    public void iClickOnElementWithXpathOther(String xpath) {
         getDriver().findElement(By.xpath(xpath)).click();
     }
-
     @Then("^I click on element using JavaScript with xpath \"([^\"]*)\"$")
     public void iClickOnElementUsingJavaScriptWithXpath(String xpath) {
         WebElement element = getDriver().findElement(By.xpath(xpath));
