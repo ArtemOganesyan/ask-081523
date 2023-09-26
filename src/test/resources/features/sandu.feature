@@ -18,10 +18,6 @@ Feature: Functional tests for ASK
     And I wait for element with xpath "//mat-icon[contains(text(),'done')]/.." to be present
     And element with xpath "//mat-icon[contains(text(),'done')]/.." should be displayed
 
-    Examples:
-      | xpath                                   | title                        | xpath1                            | text | xpath2                               | text1 | xpath3                              | text2               | xpath4                           | text3    | xpath5                           | text4 | xpath6                           | xpath7                                     | xpath8                   | xpath9                                                     |
-      | //span[contains(text(),'Register Now')] | Assessment Control @ Portnov | //*[@formcontrolname='firstName'] | Jhon | //*[@formcontrolname='firstName']/.. | Smith | //*[@formcontrolname='lastName']/.. | student11@gmail.com | //*[@formcontrolname='email']/.. | 12345Abc | //*[@formcontrolname='group']/.. | 12345 | //*[@formcontrolname='password'] | //*[@formcontrolname='confirmPassword']/.. | //button[@type='submit'] | //mat-sidenav/ac-side-menu//p[contains(text(), 'STUDENT')] |
-
 
   @ask-registration-incorrect-AS
   Scenario Outline: Not allowed special characters
