@@ -32,7 +32,6 @@ Feature: PMV Functional test for ASK
     And I wait for element with xpath "//*[contains(text(), 'text area option for this question?')]" to be present
     Then I click on element using JavaScript with xpath "//*[contains(text(), 'text area option for this question?')]"
 
-
   @Scenario-PMV-ask-single-choice-other-textarea-characters
   Scenario: PMV  Test Case ASK081523-109 Verify that user able to type Alphanumeric & Special characters in "Other" text area
   # Click on the "Assignments" on the left side of the page
