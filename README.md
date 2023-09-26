@@ -11,4 +11,5 @@ Anna Sharoiko
 Saadat Jalilova  
 Leena Ambekar  
 
-AKE (anna.k@outlook.com)  
+OAV (artem.oganesyan@gmail.com)  
+DR (rozanovsky@gmail.com)  
