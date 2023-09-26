@@ -2,7 +2,7 @@
   #Saya's Scenario
 
 @predefined
-Feature: Smoke steps
+Feature: Saadat Jalilova testcase
 
 
 @ask-Teacher-case5-SJ
