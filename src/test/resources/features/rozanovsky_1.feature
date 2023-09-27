@@ -23,10 +23,10 @@
       And element with xpath "//*[contains(text(),'Q1')]" should be displayed
       Then I click on element with xpath "//*[contains(text(),'Q1')]/../../..//*[contains(text(),'Multiple-Choice')]"
       Then I type "MCO question test?" into element with xpath "//*[@formcontrolname='question']"
-      Then I type "Wrong" into element with xpath "//*[@placeholder='Option 1*']"
-      Then I type "Other" into element with xpath "//*[@placeholder='Option 2*']"
-      Then I click on element with xpath "//*[@placeholder='Option 2*']"
-      Then I click on element with xpath "//*[@id='mat-checkbox-3']"    
+      Then I type "Wrong" into element with xpath "(//*[contains(text(),'Q1')]/../../..//textarea)[2]"
+      Then I type "Other" into element with xpath "(//*[contains(text(),'Q1')]/../../..//textarea)[3]"
+      Then I click on element with xpath "(//*[contains(text(),'Q1')]/../../..//textarea)[3]"
+      Then I click on element with xpath "(//*[contains(text(),'Q1')]/../../..//mat-checkbox)[2]"
       Then I click on element with xpath "//*[contains(text(), 'text area option for this question?')]"
       Then I click on element with xpath "//*[contains(text(),'Save')]"
       And I wait for element with xpath "//h4[contains(text(),'List of Quizzes')]" to be present
