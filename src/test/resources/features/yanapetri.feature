@@ -1,4 +1,3 @@
-git @ask-functional-feature-yp
 Feature: Test cases-Single choice question(Options)
 
   @SingleChoiceQuestion(Options)-yp
@@ -15,6 +14,8 @@ Feature: Test cases-Single choice question(Options)
     Then YP click single-choice
     Then YP type text in Option1 with input "abc"
     Then YP click radio button
+    Then I wait for 1 sec
+    Then element with xpath "//mat-radio-button[@class='mat-radio-button mat-accent mat-radio-checked']" should be present
 
   @SingleChoiceQuestion(Options)-yp
   Scenario:Verification of selection one option at a time
@@ -35,18 +36,36 @@ Feature: Test cases-Single choice question(Options)
     Then I click on element using JavaScript with xpath "//button[@class='mat-raised-button mat-primary']/..//span[contains(text(),'Create New Quiz')]"
     Then I wait for 2 sec
     # Type title of the quiz
-    Then I type "NEW Quiz" into element with xpath "//input[@placeholder='Title Of The Quiz *']"
+    Then I type "NEW Quiz111" into element with xpath "//input[@placeholder='Title Of The Quiz *']"
     # Add question button
     Then I click on element using JavaScript with xpath "//mat-icon[contains(text(),'add_circle')]"
     # Click single-choice question
     Then I click on element using JavaScript with xpath "//*[contains(text(),'Q1')]/../../..//*[contains(text(),'Single-Choice')]"
     Then I wait for 2 sec
+    # Type the question in the text field
+    Then I type "One option at a time" into element with xpath "//textarea[@formcontrolname='question']"
+    Then I wait for 2 sec
+    # Type text in the Option1 text field
+    Then I type "OPTION1" into element with xpath "(//*[contains(text(),'Q1')]/../../..//*[@formcontrolname='option'])[1]"
+    Then I wait for 2 sec
+    # Type text in the Option2 text field
+    Then I type "OPTION2" into element with xpath "(//*[contains(text(),'Q1')]/../../..//*[@formcontrolname='option'])[2]"
     # Click first radio button
     Then YP click radio button with xpath "//mat-radio-button[@class='mat-radio-button mat-accent']"
     Then I wait for 1 sec
     # Click second radio button
     Then YP click radio button with xpath "//mat-radio-group[2]/mat-radio-button"
     Then I wait for 1 sec
+    # Click Save button
+    Then I click on element with xpath "//span[contains(text(),'Save')]"
+    Then I wait for 2 sec
+    # Search the quiz
+    Then I scroll to the element with xpath "//div[@class='quizzes']/..//*[contains(text(), 'NEW Quiz111')]" with offset 0
+    Then I wait for 3 sec
+    # See the title of the quiz
+    Then element with xpath "//div[@class='quizzes']" should contain text "NEW Quiz111"
+    Then I wait for 3 sec
+
 
 
   @SingleChoiceQuestion(Options)-yp
@@ -89,6 +108,7 @@ Feature: Test cases-Single choice question(Options)
     # See pop up error message
     Then element with xpath "//div[contains(text(),'Quiz is not completed')]" should be present
     Then I wait for 2 sec
+
 
 
   @SingleChoiceQuestion(Options)-yp
@@ -213,16 +233,17 @@ Feature: Test cases-Single choice question(Options)
     # Type text in the Option2 text field
     Then I type "answer2" into element with xpath "(//*[contains(text(),'Q1')]/../../..//*[@formcontrolname='option'])[2]"
     Then I wait for 2 sec
-    # Click radio button
-    Then I click on element with xpath "//mat-radio-group[2]/mat-radio-button"
-    Then I wait for 2 sec
+    #Then element with xpath "(//*[contains(text(),'Q1')]/../../..//*[@formcontrolname='option'])[2]" should contain text "answer2"
     # Click Settings gear
     Then I click on element with xpath "//mat-radio-group[1]//*[contains(text(),'settings')]"
     Then I wait for 2 sec
     # Click Move down
     Then I click on element with xpath "//span[contains(text(),'Move option down')]"
     Then I wait for 2 sec
-
+    # Option1 moved down
+    Then element with xpath "//*[contains(text(),'Q1')]/../../..//*[@placeholder='Option 2*']" should contain text "answer1"
+    Then I wait for 2 sec
+  
   @SingleChoiceQuestion(Options)-yp
   Scenario:Verification of "Move option up" button functionality
 
@@ -263,6 +284,8 @@ Feature: Test cases-Single choice question(Options)
     # Click Move down
     Then I click on element with xpath "//span[contains(text(),'Move option up')]"
     Then I wait for 2 sec
+    # Option2 moved up
+    Then element with xpath "(//*[contains(text(),'Q1')]/../../..//*[@formcontrolname='option'])[1]" should contain text "answer2"
 
   @SingleChoiceQuestion(Options)-yp
   Scenario:Verification of "Delete option" button functionality
@@ -309,3 +332,4 @@ Feature: Test cases-Single choice question(Options)
     # Click Delete Option
     Then I click on element with xpath "//span[contains(text(),'Delete Option')]"
     Then I wait for 2 sec
+    Then element with xpath "(//*[contains(text(),'Q1')]/../../..//*[@formcontrolname='option'])[3]" should not be present
