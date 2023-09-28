@@ -1,4 +1,4 @@
-git @ask-functional-feature-yp
+@ask-functional-feature-yp
 Feature: Test cases-Single choice question(Options)
 
   @SingleChoiceQuestion(Options)-yp
@@ -15,6 +15,8 @@ Feature: Test cases-Single choice question(Options)
     Then YP click single-choice
     Then YP type text in Option1 with input "abc"
     Then YP click radio button
+    Then YP click save
+    Then YP see error message
 
   @SingleChoiceQuestion(Options)-yp
   Scenario:Verification of selection one option at a time
