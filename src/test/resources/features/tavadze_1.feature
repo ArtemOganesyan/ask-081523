@@ -1,5 +1,5 @@
 @ask-funtional-feature-vt
-Feature: Functional test for ASK
+Feature: Test for login
 
   Background: Open app
     Given I open url "http://ask-stage.portnov.com"
