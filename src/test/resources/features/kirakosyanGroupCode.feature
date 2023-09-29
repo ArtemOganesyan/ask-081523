@@ -20,7 +20,6 @@ Feature: Registration - Group Code - AKE
     And I type "123Abc" into element with xpath "//input[@formcontrolname='password']"
     And I type "123Abc" into element with xpath "//input[@formcontrolname='confirmPassword']"
     And I click on element with xpath "//span[contains(text(),'Register Me')]"
-    And I wait for 3 sec
     Then element with xpath "//mat-error[contains(text(),'This field is required')]" should contain text "This field is required"
 
   Scenario: Registration - Group Code - Min 1 character
@@ -76,3 +75,12 @@ Feature: Registration - Group Code - AKE
 
 
 
+
+    
+
+
+
+
+
+    
+    
