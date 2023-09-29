@@ -28,8 +28,8 @@
       Then I type "Two" into element with xpath "//*[@formcontrolname='lastName']"
       Then I type "student22@gmail.com" into element with xpath "//*[@formcontrolname='email']"
       Then I type "ABC" into element with xpath "//*[@formcontrolname='group']"
-      Then I type "12345" into element with xpath "//*[@formcontrolname='password']"
-      Then I type "12345" into element with xpath "//*[@formcontrolname='confirmPassword']"
+      Then I type "1234A" into element with xpath "//*[@formcontrolname='password']"
+      Then I type "1234A" into element with xpath "//*[@formcontrolname='confirmPassword']"
       Then I click on element with xpath "//*[contains(text(),'Register Me')]"
       Then I wait for 5 sec
       Then element with xpath "//h4[contains(text(),'You have been Registered')]" should contain text "You have been Registered"
@@ -106,7 +106,7 @@
           #Then I wait for 5 sec
       Then I type "student" into element with xpath "//*[@formcontrolname='firstName']"
       Then I type "Two" into element with xpath "//*[@formcontrolname='lastName']"
-      Then I type "student22@gmail.com" into element with xpath "//*[@formcontrolname='email']"
+      Then I type "student2@gmail.com" into element with xpath "//*[@formcontrolname='email']"
       Then I type "ABC" into element with xpath "//*[@formcontrolname='group']"
       Then I type "" into element with xpath "//*[@formcontrolname='password']"
       Then I type "" into element with xpath "//*[@formcontrolname='confirmPassword']"
@@ -117,12 +117,12 @@
 
    @ask-password(invalid)-JC
    Scenario: Password and confirmpassword (with whitespaces)
-      #Given I open url "http://ask-stage.portnov.com"
+      Given I open url "http://ask-stage.portnov.com"
       Then I click on element with xpath "//span[contains(text(),'Register Now')]"
           #Then I wait for 5 sec
       Then I type "student" into element with xpath "//*[@formcontrolname='firstName']"
       Then I type "Two" into element with xpath "//*[@formcontrolname='lastName']"
-      Then I type "student22@gmail.com" into element with xpath "//*[@formcontrolname='email']"
+      Then I type "student2@gmail.com" into element with xpath "//*[@formcontrolname='email']"
       Then I type "ABC" into element with xpath "//*[@formcontrolname='group']"
       Then I type "12345 Abc" into element with xpath "//*[@formcontrolname='password']"
       Then I type "12345 Abc" into element with xpath "//*[@formcontrolname='confirmPassword']"
@@ -130,6 +130,10 @@
       And I wait for element with xpath "//mat-error[contains(text(),'Whitespaces are not allowed')]" to be present
       And element with xpath "//mat-error[contains(text(),'Whitespaces are not allowed')]" should be displayed
       Then I wait for 5 sec
+
+
+
+
 
 
 
