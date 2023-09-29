@@ -11,6 +11,7 @@ Feature: PMV Functional test for ASK
   # Click the "Sign In" button
     Then I click on element with xpath "//button[@type='submit']"
     And I wait for element with xpath "//mat-sidenav/ac-side-menu//p[contains(text(), 'TEACHER')]" to be present
+    And I wait for 2 sec
 
   @Scenario-PMV-ask-single-choice-other-textarea
   Scenario: PMV Test Case ASK081523-108 Verify that Single-Choice question includes "Other" text area option
