@@ -29,8 +29,7 @@ Feature: PMV Functional test for ASK
     Then I click on element with xpath "//*[contains(text(), 'Single-Choice')]"
     And I wait for 2 sec
   # Verify that 'Include "Other" text area option for this question?' is present and checkbox is clickable
-    And I wait for element with xpath "//*[contains(text(), 'text area option for this question?')]" to be present
-    Then I click on element using JavaScript with xpath "//*[contains(text(), 'text area option for this question?')]"
+    And element with xpath "//*[contains(text(), 'text area option for this question?')]" should be displayed
 
   @Scenario-PMV-ask-single-choice-other-textarea-characters
   Scenario: PMV  Test Case ASK081523-109 Verify that user able to type Alphanumeric & Special characters in "Other" text area
@@ -69,4 +68,7 @@ Feature: PMV Functional test for ASK
     Then I click on element with xpath "(//*[contains(text(), 'Go To Assessment')])[1]"
     And I wait for 3 sec
   # Type in "Other" text area following text
-    Then I type "Sunday, August 20, 2023!" into element with xpath "//textarea[@formcontrolname='textAnswer']"
+    Then I type "September, 2023!" into element with xpath "//textarea[@formcontrolname='textAnswer']"
+    And I wait for 2 sec
+  # Assert that "Other" text area contains text "Sunday, August 20, 2023!"
+    Then element with xpath "//textarea[@formcontrolname='textAnswer']" should contain text "September, 2023!"
