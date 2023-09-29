@@ -11,6 +11,7 @@ Feature: my test case
     Then I type "123qwe" into element with xpath "//input[@formcontrolname='password']"
     And I click on element with xpath "//button[@type='submit']"
     Then I wait for element with xpath "//p[contains(text(), 'TEACHER')]" to be present
+    Then I wait for 3 sec
     Then I click on element with xpath "//h5[contains(text(), 'Assignments')]"
     And element with xpath "//button[@class='mat-raised-button mat-primary']" should be present
     Then I click on element using JavaScript with xpath " //button[@class='mat-raised-button mat-primary']"
