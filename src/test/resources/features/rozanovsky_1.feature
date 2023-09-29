@@ -49,6 +49,7 @@
         Then I click on element with xpath "//span[contains(text(),'Create New Assignment')]"
         And I wait for element with xpath "//h4[contains(text(),'Give Assignment')]" to be present
         Then I click on element with xpath "//*[@formcontrolname='quizId']"
+        And I wait for 3 sec
         Then I click on element with xpath "//span[contains(text(),'MCO12345')]"
         Then I click on element with xpath "//mat-list-option//div[text()[contains(., 'Student Four')]]"
         Then I click on element with xpath "//button[@type='submit']"
