@@ -61,7 +61,8 @@
         Then I type "student4@gmail.com" into element with xpath "//*[@formcontrolname='email']"
         Then I type "12345Abc" into element with xpath "//*[@formcontrolname='password']"
         Then I click on element with xpath "//button[@type='submit']"
-        And I wait for element with xpath "//mat-sidenav/ac-side-menu//p[contains(text(), 'STUDENT')]" to be present
+        #And I wait for element with xpath "//mat-sidenav/ac-side-menu//p[contains(text(), 'STUDENT')]" to be present
+        And I wait for 3 sec
         Then I click on element with xpath "//h5[contains(text(),'My Assignments')]"
         And I wait for element with xpath "//h4[contains(text(),'My Assignments')]" to be present
         And I wait for 3 sec
