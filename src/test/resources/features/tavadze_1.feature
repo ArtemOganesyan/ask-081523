@@ -1,7 +1,7 @@
 @ask-funtional-feature-vt
 Feature: Test for login
 
-  Background: Open app
+  Background: Open application
     Given I open url "http://ask-stage.portnov.com"
 
   @ask-login-vt
