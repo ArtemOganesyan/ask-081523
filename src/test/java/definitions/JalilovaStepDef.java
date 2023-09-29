@@ -1,13 +1,13 @@
 // Created by Saadat Jalilova (09.22.2023)
 package definitions;
 
-        import cucumber.api.java.en.And;
-        import cucumber.api.java.en.Given;
-        import cucumber.api.java.en.Then;
-        import org.openqa.selenium.*;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import org.openqa.selenium.*;
 
-        import static org.assertj.core.api.Assertions.*;
-        import static support.TestContext.getDriver;
+import static org.assertj.core.api.Assertions.*;
+import static support.TestContext.getDriver;
 
 public class JalilovaStepDef {
     @Given("SJ open ask-stage url")

@@ -2,7 +2,7 @@
   Feature: CreateAssignment
 
     @CreateAssignmentStudent
-    Scenario: DMA Create assignment
+    Scenario:Create assignment
       Given I open url "http://ask-stage.portnov.com/"
       When I type "melek2703@gmail.com" into element with xpath "//*[@formcontrolname='email']"
       When I type "qwerty22" into element with xpath "//*[@formcontrolname='password']"
