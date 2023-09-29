@@ -202,6 +202,7 @@ Feature: Test cases-Single choice question(Options)
     Then I wait for 2 sec
 
 
+
   @SingleChoiceQuestion(Options)-yp
   Scenario:Verification of "Move option down" button functionality
 
@@ -228,17 +229,25 @@ Feature: Test cases-Single choice question(Options)
     # Click single - choice
     Then I click on element using JavaScript with xpath "//*[contains(text(),'Q1')]/../../..//*[contains(text(),'Single-Choice')]"
     Then I wait for 2 sec
+     # Type question
+    Then I type "Move down" into element with xpath "//textarea[@formcontrolname='question']"
     # Type text in the Option1 text field
     Then I type "answer1" into element with xpath "(//*[contains(text(),'Q1')]/../../..//*[@formcontrolname='option'])[1]"
     # Type text in the Option2 text field
     Then I type "answer2" into element with xpath "(//*[contains(text(),'Q1')]/../../..//*[@formcontrolname='option'])[2]"
     Then I wait for 2 sec
-    #Then element with xpath "(//*[contains(text(),'Q1')]/../../..//*[@formcontrolname='option'])[2]" should contain text "answer2"
     # Click Settings gear
     Then I click on element with xpath "//mat-radio-group[1]//*[contains(text(),'settings')]"
     Then I wait for 2 sec
     # Click Move down
     Then I click on element with xpath "//span[contains(text(),'Move option down')]"
+    Then I wait for 2 sec
+     # Click first radio button
+    Then YP click radio button with xpath "//mat-radio-button[@class='mat-radio-button mat-accent']"
+    Then I wait for 1 sec
+    Then I click on element with xpath "//span[contains(text(),'Save')]"
+    Then I wait for 2 sec
+    Then element with xpath "//div[@class='quizzes']" should contain text "Move down"
     Then I wait for 2 sec
 
 
@@ -318,6 +327,8 @@ Feature: Test cases-Single choice question(Options)
     # Click single - choice
     Then I click on element using JavaScript with xpath "//*[contains(text(),'Q1')]/../../..//*[contains(text(),'Single-Choice')]"
     Then I wait for 2 sec
+    # Type question
+    Then I type "Move up" into element with xpath "//textarea[@formcontrolname='question']"
     # Type text in the Option1 text field
     Then I type "answer1" into element with xpath "(//*[contains(text(),'Q1')]/../../..//*[@formcontrolname='option'])[1]"
     # Type text in the Option2 text field
@@ -329,5 +340,13 @@ Feature: Test cases-Single choice question(Options)
     # Click Settings gear
     Then I click on element with xpath "//mat-radio-group[2]//*[contains(text(),'settings')]"
     Then I wait for 2 sec
-    # Click Move down
+    # Click Move up
     Then I click on element with xpath "//span[contains(text(),'Move option up')]"
+    Then I click on element with xpath "//span[contains(text(),'Save')]"
+    Then I wait for 2 sec
+    Then element with xpath "//div[@class='quizzes']" should contain text "Move option up"
+    Then I wait for 2 sec
+
+
+
+
