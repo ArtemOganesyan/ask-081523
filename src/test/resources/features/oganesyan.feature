@@ -1,6 +1,6 @@
 # This is my feature file
 #
-# Scenario
+# Scenario 2
 
   @oganesyan_feature
   Feature: Ttt
