@@ -2,10 +2,9 @@
 #
 # Scenario
 
-  @feature
+  @oganesyan_feature
   Feature: Ttt
 
-    @scenario_1
-    Scenario: Scenario:
+    @oav_scenario1
+    Scenario: OAV Scenario
       Given I open url "http://ask-stage.portnov.com"
-      Then I type "<string>" into element with xpath "<string>"
