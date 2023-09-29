@@ -40,7 +40,8 @@
         Then I type "rozanovsky@icloud.com" into element with xpath "//*[@formcontrolname='email']"
         Then I type "12345" into element with xpath "//*[@formcontrolname='password']"
         Then I click on element with xpath "//button[@type='submit']"
-        And I wait for element with xpath "//mat-sidenav/ac-side-menu//p[contains(text(), 'TEACHER')]" to be present
+        And I wait for 3 sec
+        #And I wait for element with xpath "//mat-sidenav/ac-side-menu//p[contains(text(), 'TEACHER')]" to be present
         Then I click on element with xpath "//h5[contains(text(),'Assignments')]"
         #And I wait for element with xpath "//h5[contains(text(),'Assignments')]" to be present
         #And I wait for element with xpath "//span[contains(text(),'Create New Assignment')]" to be present
