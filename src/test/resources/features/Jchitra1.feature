@@ -52,7 +52,7 @@
 
    @ask-password(invalid)-JC
    Scenario: Missmatch between Password and confirmpassword
-       # Given I open url "http://ask-stage.portnov.com"
+       # Given I open url "http://ask-stage.portnov.com!!"
       Then I click on element with xpath "//span[contains(text(),'Register Now')]"
           #Then I wait for 5 sec
       Then I type "student" into element with xpath "//*[@formcontrolname='firstName']"
