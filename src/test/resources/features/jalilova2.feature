@@ -11,7 +11,7 @@ Given SJ open ask-stage url
 Then SJ type email
 Then SJ type password
 Then SJ click on Submit
-And SJ wait for 5 sec
+And SJ wait for 3 sec
 Then SJ see the main menu
   And SJ wait for 3 sec
 Then SJ click on Quizzes
