@@ -1,5 +1,7 @@
 @predefined
 Feature: Registration - Group Code - AKE
+  @Scenario-AK-GroupCode
+
   Scenario: Registration - Group Code - Alphanumeric & Special characters
     Given I open url "http://ask-stage.portnov.com/#/registration"
     And I type "AName" into element with xpath "//input[@formcontrolname='firstName']"
