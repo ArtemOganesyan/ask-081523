@@ -34,7 +34,7 @@
       And I wait for 5 sec
 
       @ask-other-option-is-present-for-student-dr
-      Scenario: Other answer is present and savable for a student
+      Scenario: Other answer is present and submitted for a student
         Given I open url "http://ask-stage.portnov.com"
         Then I type "rozanovsky@icloud.com" into element with xpath "//*[@formcontrolname='email']"
         Then I type "12345" into element with xpath "//*[@formcontrolname='password']"
