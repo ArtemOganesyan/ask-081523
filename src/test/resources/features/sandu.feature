@@ -5,9 +5,11 @@ Feature: Functional tests for AS
 
   @ask-registration-AS
 Scenario Outline: Successful register new user
+    Given I open url "http://ask-stage.portnov.com"
     Then I click on element with xpath "//span[contains(text(),'Register Now')]"
     Then I should see page title as "Assessment Control @ Portnov"
     Then element with xpath "//*[@formcontrolname='firstName']" should be present
+    Then element with xpath "//*[@formcontrolname='firstName']" should be displayed
     Then I type "John" into element with xpath "//*[@formcontrolname='firstName']"
     Then I type "Smith" into element with xpath "//*[@formcontrolname='lastName']"
     Then I type "student11@gmail.com" into element with xpath "//*[@formcontrolname='email']"
