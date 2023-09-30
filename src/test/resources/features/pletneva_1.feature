@@ -41,13 +41,13 @@ Feature: PMV Functional test for ASK
     Then I click on element using JavaScript with xpath "//*[contains(text(), 'Create New Assignment')]"
     Then I wait for element with xpath "//h4[contains (text(), 'Give Assignment')]" to be present
   # Click on drop-down menu "Select Quiz To Assign"
-    Then I click on element using JavaScript with xpath "//*[text()='Select Quiz To Assign'][1]"
-    And I wait for 3 sec
+    Then I click on element with xpath "//span[contains(text(),'Select Quiz To Assign')]"
+    Then I scroll to the element with xpath "//span[@class='mat-option-text'][contains(text(), 'ABCliliana')]" with offset 6
+   # Click on "123liliana" quiz from drop-down menu "Select Quiz To Assign" -
+    Then I click on element with xpath "//span[@class='mat-option-text'][contains(text(), 'ABCliliana')]"
   # Click on student name "Test_student_liliana"
     Then I click on element with xpath "//text()[contains(.,'TestStudentLiliana')]/../..//div[@class='mat-list-text']"
-  # Click on "123" quiz from drop-down menu "Select Quiz To Assign" -
-    Then I click on element using JavaScript with xpath "//mat-selection-list/mat-list-option[36]"
-  #Click on "Give Assignment" button
+   #Click on "Give Assignment" button
     Then I click on element with xpath "//button[@type='submit']"
   # Click on "Log Out" on the left side of the page
     Then I click on element with xpath "//h5[contains(text(), 'Log Out')]"
@@ -68,8 +68,13 @@ Feature: PMV Functional test for ASK
   # Click on "Go To Assessment" button on "123" quiz
     Then I click on element with xpath "(//*[contains(text(), 'Go To Assessment')])[1]"
     And I wait for 3 sec
+  # Click on radio button of first answer option
+    Then I click on element using JavaScript with xpath "//*[contains(text(), 'summer')]"
   # Type in "Other" text area following text
     Then I type "September, 2023!" into element with xpath "//textarea[@formcontrolname='textAnswer']"
     And I wait for 2 sec
-  # Assert that "Other" text area contains text "Sunday, August 20, 2023!"
-    Then element with xpath "//textarea[@formcontrolname='textAnswer']" should contain text "September, 2023!"
+  # Click on button "Submit My Answers"
+    Then I click on element with xpath "//*[contains(text(), 'Submit My Answers')]"
+    And I wait for 2 sec
+  # Assert that Assignment was submitted and user able to see window with message "Your submission has been accepted. You might track your results on "My Grades" page."
+    Then element with xpath "//p[contains(text(),'Your submission has been accepted. You might track')]" should be displayed
