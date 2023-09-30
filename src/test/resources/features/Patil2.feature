@@ -6,7 +6,7 @@
 @submissions-status-functional-feature-VP
 Feature: Functional tests for Submissions-status
 
-  @Sub-status-passed-VP
+  @Sub-status-Passed-VP
   Scenario: Auto-graded status check-passed
     Given I open url "http://ask-stage.portnov.com"
     Then I type "germarki@gemarbola.link" into element with xpath "//*[@formcontrolname='email']"
@@ -19,11 +19,12 @@ Feature: Functional tests for Submissions-status
     And I wait for 5 sec
     Then  I click on element with xpath " //div[contains(text(),'Automatically Graded')]"
     And I wait for 5 sec
-    Then I click on element with xpath "//tbody/tr[5]/td[7]/a[1]/button[1]/span[1]"
+    Then I click on element with xpath " //tbody/tr[7]/td[7]/a[1]/button[1]/span[1]"
     And I wait for 5 sec
     Then I click on element with xpath "//td[contains(text(),'Passing points / percentage:')]"
     And I wait for 5 sec
     Then I click on element with xpath "//div[contains(text(),'ASSESSMENT PASSED')]"
+    And I wait for 5 sec
     Then I click on element with xpath "//span[contains(text(),'Cancel')]"
     And I wait for 5 sec
     And element with xpath "//tbody/tr[5]/td[5]/span[1]" should be displayed
