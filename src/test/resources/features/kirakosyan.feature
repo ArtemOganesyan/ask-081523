@@ -1,7 +1,6 @@
 @predefined
 Feature: Registration - Group Code - AKE
-  @Scenario-AK-GroupCode
-
+  @AKE_scenario1
   Scenario: Registration - Group Code - Alphanumeric & Special characters
     Given I open url "http://ask-stage.portnov.com/#/registration"
     And I type "AName" into element with xpath "//input[@formcontrolname='firstName']"
@@ -14,6 +13,7 @@ Feature: Registration - Group Code - AKE
     And I wait for 3 sec
     Then element with xpath "//h4[contains(text(),'You have been Registered.')]" should contain text "You have been Registered"
 
+  @AKE_scenario2
   Scenario: Registration - Group Code - Field is required
     Given I open url "http://ask-stage.portnov.com/#/registration"
     And I type "AName" into element with xpath "//input[@formcontrolname='firstName']"
@@ -25,6 +25,7 @@ Feature: Registration - Group Code - AKE
     And I wait for 3 sec
     Then element with xpath "//mat-error[contains(text(),'This field is required')]" should contain text "This field is required"
 
+  @AKE_scenario3
   Scenario: Registration - Group Code - Min 1 character
     Given I open url "http://ask-stage.portnov.com/#/registration"
     And I type "AName" into element with xpath "//input[@formcontrolname='firstName']"
@@ -37,6 +38,7 @@ Feature: Registration - Group Code - AKE
     And I wait for 3 sec
     Then element with xpath "//h4[contains(text(),'You have been Registered.')]" should contain text "You have been Registered"
 
+  @AKE_scenario4
   Scenario: Registration - Group Code - Max 6 character
     Given I open url "http://ask-stage.portnov.com/#/registration"
     And I type "AName" into element with xpath "//input[@formcontrolname='firstName']"
@@ -49,6 +51,7 @@ Feature: Registration - Group Code - AKE
     And I wait for 2 sec
     Then element with xpath "//h4[contains(text(),'You have been Registered.')]" should contain text "You have been Registered"
 
+  @AKE_scenario5
   Scenario: Registration - Group Code - Max +1 character
     Given I open url "http://ask-stage.portnov.com/#/registration"
     And I type "AName" into element with xpath "//input[@formcontrolname='firstName']"
@@ -58,6 +61,7 @@ Feature: Registration - Group Code - AKE
     And I click on element with xpath "//input[@formcontrolname='password']"
     Then element with xpath "//mat-error[contains(text(),'Too long')]" should contain text "Too long"
 
+  @AKE_scenario6
   Scenario: Registration - Group Code - White spaces are not allowed - Leading spaces
     Given I open url "http://ask-stage.portnov.com/#/registration"
     And I type "AName" into element with xpath "//input[@formcontrolname='firstName']"
@@ -67,6 +71,7 @@ Feature: Registration - Group Code - AKE
     And I click on element with xpath "//input[@formcontrolname='password']"
     Then element with xpath "//mat-error[contains(text(), 'Whitespaces are not allowed')]" should contain text "Whitespaces are not allowed"
 
+  @AKE_scenario7
   Scenario: Registration - Group Code - White spaces are not allowed - Trailing spaces
     Given I open url "http://ask-stage.portnov.com/#/registration"
     And I type "AName" into element with xpath "//input[@formcontrolname='firstName']"
