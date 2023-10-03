@@ -1,7 +1,7 @@
 @testcases
 Feature: Functional tests for ASK
 
-  @ask-quiz-creation
+
   Scenario: Create single-choice quiz with showstopper
     Given I open url "http://ask-stage.portnov.com"
     Then I type "marianna_androsov@yahoo.com" into element with xpath "//*[@formcontrolname='email']"
