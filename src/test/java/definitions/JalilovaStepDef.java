@@ -58,4 +58,9 @@ public class JalilovaStepDef {
     public void iWaitForSec(int sec) throws Exception {
         Thread.sleep(sec * 1000);
     }
+
+    @Then("element with xpath {string} should be present")
+    public void elementWithXpathOtherShouldBePresent(String xpath) {
+        assertThat(getDriver().findElements(By.xpath(xpath))).hasSize(1);
+    }
 }
