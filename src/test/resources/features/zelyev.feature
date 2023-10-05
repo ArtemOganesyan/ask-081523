@@ -1,9 +1,9 @@
-@predefined
+@predefined_ZMO
 Feature: Group code in Review page
   Background: I open app
     Given I open url "http://ask-stage.portnov.com/"
 
-  @Scenario1
+  @Scenario1_ZMO
   Scenario: ASK081523-292 (group code should be visible)
   #Step 2  I type valid credentials
     Then I type "mattzelyev@gmail.com" into element with xpath "//input[@formcontrolname='email']"
