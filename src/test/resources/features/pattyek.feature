@@ -46,5 +46,27 @@ Feature: Functional tests for ASK
     Then I click on element with xpath "//span[contains(text(),'Save')]"
     Then I wait for 3 sec
 
-
+  @ask-assignments
+  Scenario: Give assignments
+    Then I type "penaka29@gmail.com" into element with xpath "//*[@formcontrolname='email']"
+    Then I type "Abc12345" into element with xpath "//*[@formcontrolname='password']"
+    Then I click on element with xpath "//button[@type='submit']"
+    Then I wait for 3 sec
+    #Step Click on 'Assignments' Button
+    Then I click on element using JavaScript with xpath "//h5[contains(text(),'Assignments')]"
+    Then I wait for 3 sec
+    #Step Select 'Create New Assignment'
+    Then I click on element using JavaScript with xpath "//span[contains(text(),'Create New Assignment')]"
+    Then I wait for 3 sec
+    Then I click on element using JavaScript with xpath "//mat-select[@formcontrolname='groupFilter']"
+    Then I wait for 3 sec
+    Then I click on element using JavaScript with xpath "//body/div[2]/div[2]/div[1]/div[1]/mat-option[55]/span[1]"
+    Then I wait for 3 sec
+    Then I click on element using JavaScript with xpath "//span[contains(text(),'Select Quiz To Assign')]"
+    Then I wait for 3 sec
+    Then I click on element using JavaScript with xpath "//body/div[2]/div[3]/div[1]/div[1]/mat-option[339]/span[1]"
+    Then I click on element using JavaScript with xpath "//body/ac-root[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/main[1]/ac-create-assignment-page[1]/mat-card[1]/form[1]/mat-selection-list[1]/mat-list-option[8]/div[1]/mat-pseudo-checkbox[1]" 
+    Then I wait for 3 sec
+    Then I click on element using JavaScript with xpath "//span[contains(text(),'Give Assignment')]"
+    Then I wait for 3 sec
 
