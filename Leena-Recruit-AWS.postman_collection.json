@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "efc7cfbf-445b-4fce-8f1e-ebc46d1016cb",
+		"name": "Recruit-AWS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27210910",
+		"_collection_link": "https://bold-meadow-488137.postman.co/workspace/ASK-081523~1fd6993e-bbe2-4429-930e-34a4880f9c72/collection/27210910-efc7cfbf-445b-4fce-8f1e-ebc46d1016cb?action=share&source=collection_link&creator=27210910"
+	},
+	"item": [
+		{
+			"name": "Create New Candidate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"",
+							"var jsonData = pm.response.json();",
+							"pm.environment.set(\"candidateID\", jsonData.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"firstName\": \"Leena-student11\",\n  \"middleName\": \"aaa\",\n  \"lastName\": \"bbbb\",\n  \"email\": \"leenastudent11@gmail.com\",\n  \"password\": \"12345Abc\",\n  \"address\": \"abcd, pqr 12345\",\n  \"city\": \"xyz\",\n  \"state\": \"California\",\n  \"zip\": \"95023\",\n  \"summary\": \"AWS practice\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/candidates",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"candidates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Candidate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"var jsonData = pm.response.json();",
+							"pm.environment.set(\"candidateToken\", jsonData.token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"leenastudent11@gmail.com\",\n  \"password\": \"12345Abc\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/login",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
