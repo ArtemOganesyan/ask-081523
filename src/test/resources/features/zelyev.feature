@@ -30,3 +30,10 @@ Feature: Group code in Review page
     Then I wait for 3 sec
     # 8. Review group name
     Then element with xpath "//td[contains(text(),'Group:')]/.." should contain text "abcd"
+
+  @Scenario2_ZMO
+  Scenario: ASK081523-288 (group code should be visible in a Grade page)
+    Then MZ type "mattzelyev@gmail.com" into element with xpath "//input[@formcontrolname='email']"
+    Then MZ type "Abc123" into element with xpath "//input[@formcontrolname='password']"
+    Then MZ click on element with xpath "//*[contains(text(),'Sign In')]/.."
+
